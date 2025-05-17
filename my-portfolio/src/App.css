@@ -1,0 +1,158 @@
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes subtlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* Define CSS variables for theming */
+:root {
+  /* Light Theme (Default) */
+  --bg-color: #f0f8ff; /* AliceBlue - very light blue */
+  --text-color: #2c3e50; /* Dark slate gray */
+  --primary-color: #4a90e2; /* Softer blue for highlights */
+  --container-bg: #ffffff;
+  --container-shadow: rgba(0, 0, 0, 0.08);
+  --container-border: #ddeeff;
+  --link-color: #0056b3; /* Darker blue for links */
+  --link-hover-color: #ffffff;
+  --link-hover-bg: #4a90e2;
+  --footer-text-color: #555;
+  --tagline-color: #4a5568; /* Slate gray for tagline */
+  --toggle-bg: #e0e0e0;
+  --toggle-fg: #2c3e50;
+}
+
+.dark-theme {
+  /* Dark Theme */
+  --bg-color: #1a202c; /* Very dark desaturated blue */
+  --text-color: #e2e8f0; /* Light grayish blue */
+  --primary-color: #63b3ed; /* Lighter, brighter blue for highlights */
+  --container-bg: #2d3748; /* Dark slate */
+  --container-shadow: rgba(0, 0, 0, 0.2);
+  --container-border: #4a5568;
+  --link-color: #90cdf4; /* Light blue for links */
+  --link-hover-color: #1a202c;
+  --link-hover-bg: #63b3ed;
+  --footer-text-color: #a0aec0;
+  --tagline-color: #cbd5e0; /* Lighter slate gray for tagline */
+  --toggle-bg: #4a5568;
+  --toggle-fg: #e2e8f0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex; /* For centering the SVG icon */
+  align-items: center; /* For centering the SVG icon */
+  justify-content: center; /* For centering the SVG icon */
+}
+
+.portfolio-container {
+  background-color: var(--container-bg);
+  /* backdrop-filter: blur(5px); Optional: if you still want a subtle blur */
+  padding: 30px 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--container-shadow);
+  border: 1px solid var(--container-border);
+  animation: fadeIn 0.8s ease-out forwards; /* Apply fade-in animation */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* For positioning the theme toggle button */
+}
+
+.portfolio-header h1 {
+  font-size: 2.8em; /* Slightly larger */
+  margin-bottom: 0.2em;
+  color: var(--text-color); /* Use theme text color */
+}
+
+.highlight-name {
+  color: var(--primary-color); /* Use theme primary color */
+  /* Optional: add a subtle animation to the name */
+  /* animation: subtlePulse 3s infinite ease-in-out; */
+}
+
+.tagline {
+  font-size: 1.2em;
+  color: var(--tagline-color);
+  margin-bottom: 2em;
+  font-style: italic;
+}
+
+.portfolio-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-links a:hover {
+  color: var(--link-hover-color);
+  background-color: var(--link-hover-bg);
+  transform: translateY(-2px) scale(1.05); /* Slight lift and scale effect */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-footer {
+  margin-top: 3em;
+  font-size: 0.9em;
+  color: var(--footer-text-color);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--toggle-bg);
+  color: var(--toggle-fg);
+  border: 1px solid var(--container-border);
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px; /* Adjust padding for icon */
+  background-color: transparent; /* Make background transparent */
+  color: #5c6bc0; /* Icon color for light theme */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex; /* For centering the SVG icon */
+  align-items: center; /* For centering the SVG icon */
+  justify-content: center; /* For centering the SVG icon */
+}
+
+.theme-toggle-button:hover {
+  opacity: 0.8;
+  background-color: rgba(92, 107, 192, 0.1); /* Slight background on hover */
+}
+
+.theme-toggle-button svg {
+  width: 20px; /* Adjust icon size as needed */
+  height: 20px; /* Adjust icon size as needed */
+}
+body.dark-theme .theme-toggle-button {
+  background-color: #7e57c2; /* Deep purple for button in dark mode */
+  color: #ffffff;
+  color: #eceff1; /* Icon color for dark theme */
+  background-color: transparent;
+}
+
+body.dark-theme .theme-toggle-button:hover {
+  background-color: #5e35b1;
+  background-color: rgba(126, 87, 194, 0.2); /* Slight background on hover for dark theme */
+ }
