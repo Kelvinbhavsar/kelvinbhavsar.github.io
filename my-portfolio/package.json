@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "private": true,
-  "homepage": "https://kelvinbhavsar.github.io/my-portfolio",
+  "homepage": "https://kelvinbhavsar.github.io/my-portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
