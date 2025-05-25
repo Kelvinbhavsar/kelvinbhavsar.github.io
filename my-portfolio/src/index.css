@@ -28,6 +28,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%; /* Ensure body element takes full viewport width */
+}
+
+#root {
+  width: 100%; /* Allow the React app's root container to fill the body's width */
+  /* Optional: if you want #root to also fill height within the flex body */
+  /* height: 100%; */
 }
 
 h1 {

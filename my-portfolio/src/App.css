@@ -173,6 +173,7 @@
 
 .horizontal-timeline-section {
   margin-bottom: 3rem;
+  /* display: none; */ /* Timeline is now visible */
 }
 
 .horizontal-timeline {
@@ -282,7 +283,7 @@
 .main-content-area {
   margin-top: 2rem;
   width: 100%;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   text-align: left;
   animation: fadeInSlideUp 0.5s forwards ease-out;
   padding: 0 10px;
@@ -389,6 +390,6 @@
 ==========================================================*/
 
 .content-wrapper {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   width: 100%;
 }
