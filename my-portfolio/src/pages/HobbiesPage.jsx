@@ -4,15 +4,16 @@ const HobbiesPage = () => {
   return (
     <div className="page-content">
       <h2>Hobbies & Interests</h2>
-      <p>
-        Outside of coding, I enjoy a variety of activities that help me relax and gain new perspectives.
-      </p>
-      <ul>
-        <li>Exploring new technologies and open-source projects.</li>
-        <li>Reading (tech blogs, sci-fi, fantasy).</li>
-        <li>Traveling and experiencing different cultures.</li>
-        <li><em>(Add your personal hobbies here!)</em></li>
-      </ul>
+      <div className="hobbies-content">
+        <p>
+          Beyond coding, I enjoy exploring various activities that help me maintain a well-rounded lifestyle
+          and contribute to my creative problem-solving abilities.
+        </p>
+        <div className="hobby-item">
+          <h3>Technology</h3>
+          <p>Exploring new technologies and contributing to open-source projects</p>
+        </div>
+      </div>
     </div>
   );
 };
